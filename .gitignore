@@ -3,7 +3,7 @@ Binaries/
 DerivedDataCache/
 Intermediate/
 Saved/
-
+test
  # Visual Studio solutions
 .vs/
 *.sln
