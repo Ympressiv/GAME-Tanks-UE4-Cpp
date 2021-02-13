@@ -13,6 +13,16 @@ class TOONTANKS_API APawnBase : public APawn
 {
 	GENERATED_BODY()
 
+private:
+	UPROPERTY()
+	UCapsuleComponent* CapsuleComp;
+	UPROPERTY()
+	UStaticMeshComponent* BaseMesh;
+	UPROPERTY()
+	UStaticMeshComponent* TurretMesh;
+	UPROPERTY()
+	USceneComponent* ProjectileSpawnPoint; 
+
 public:
 	// Sets default values for this pawn's properties
 	APawnBase();
@@ -21,12 +31,6 @@ public:
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-private:
-	UCapsuleComponent* CapsuleComp;
-	UStaticMeshComponent* BaseMesh;
-	UStaticMeshComponent* TurretMesh; 
-	USceneComponent* ProjectileSpawnPoint; 
 
 protected:
 	// Called when the game starts or when spawned
